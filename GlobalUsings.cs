@@ -1,0 +1,2 @@
+﻿global using CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.TemplateHelpers;
+global using System.Diagnostics;
