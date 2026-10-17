@@ -5,15 +5,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RunPostBuildAppCondition Condition="'$(Configuration)' == 'Release'">true</RunPostBuildAppCondition>
     <FeedType>Public</FeedType>
-    <ToolCommandName>WPFBlazor</ToolCommandName>
+    <ToolCommandName>CreateWPFBlazorTool</ToolCommandName>
     <PackAsTool>true</PackAsTool>
+    <RunPostBuildAppCondition Condition="'$(Configuration)' == 'Release'">true</RunPostBuildAppCondition>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="CommonBasicLibraries" Version="10.0.15" />
-  </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="C:\VS\OneNet\Apps\CommandLines\PostBuildToolHandler\bin\Release\net10.0\PostBuildToolHandler.exe $(ProjectName) $(ProjectDir) $(ProjectFileName) $(TargetDir)" Condition="'$(Configuration)' == 'Release' and '$(RunPostBuildAppCondition)' == 'true'" />
+    <Exec Command="C:\VS\Apps\CommandLines\PostBuildToolHandler\bin\Release\net10.0\PostBuildToolHandler.exe $(ProjectName) $(ProjectDir) $(ProjectFileName) $(TargetDir)" Condition="'$(Configuration)' == 'Release' and '$(RunPostBuildAppCondition)' == 'true'" />
   </Target>
+  <ItemGroup>
+    <PackageReference Include="Musictopia2.CommonBasicLibraries" Version="10.0.1" />
+  </ItemGroup>
 </Project>
