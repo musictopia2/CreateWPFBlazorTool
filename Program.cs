@@ -8,7 +8,7 @@ ITemplateCreater create = new CreateSimpleTemplateClass();
 CreateSimpleTemplateClass.TemplateName = "SimpleWPFBlazorApp";
 if (IsTemplateInstalled(CreateSimpleTemplateClass.TemplateName) == false)
 {
-    if (await InstallTemplateIfMissingAsync("Musictopia.SimpleWPFBlazorApp", CreateSimpleTemplateClass.TemplateName) == false)
+    if (await InstallTemplateIfMissingAsync("Musictopia2.SimpleWPFBlazorApp", CreateSimpleTemplateClass.TemplateName) == false)
     {
         return; //if this failed, don't continue.
     }
