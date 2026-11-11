@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <FeedType>Public</FeedType>
@@ -11,9 +11,9 @@
     <RunPostBuildAppCondition Condition="'$(Configuration)' == 'Release'">true</RunPostBuildAppCondition>
   </PropertyGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="C:\VS\Apps\CommandLines\PostBuildToolHandler\bin\Release\net10.0\PostBuildToolHandler.exe $(ProjectName) $(ProjectDir) $(ProjectFileName) $(TargetDir)" Condition="'$(Configuration)' == 'Release' and '$(RunPostBuildAppCondition)' == 'true'" />
+    <Exec Command="C:\VS\Apps\CommandLines\PostBuildToolHandler\bin\Release\net11.0\PostBuildToolHandler.exe $(ProjectName) $(ProjectDir) $(ProjectFileName) $(TargetDir)" Condition="'$(Configuration)' == 'Release' and '$(RunPostBuildAppCondition)' == 'true'" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="Musictopia2.CommonBasicLibraries" Version="10.0.1" />
+    <PackageReference Include="Musictopia2.CommonBasicLibraries" Version="11.0.1" />
   </ItemGroup>
 </Project>
